@@ -1,0 +1,267 @@
+/* =========================
+   GLOBAL RESET
+========================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Georgia, serif;
+  line-height: 1.5;
+}
+
+/* =========================
+   HERO SECTION
+========================= */
+.hero {
+  position: relative;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  border-bottom-left-radius: 100% 30%;
+  border-bottom-right-radius: 100% 30%;
+  margin-bottom: -110px;
+}
+
+/* HERO PILLS */
+.hero-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.pill {
+  background: #c9b59c;
+  color: #6a3a1e;
+  padding: 50px 40px 20px;
+  border-radius: 999px;
+  font-size: clamp(1.2rem, 3vw, 2.4rem);
+  text-align: center;
+  width: max-content;
+}
+.pill.name{
+  padding: 20px 40px;
+  margin-top: -1.2rem; /* OVERLAP */
+  z-index: 2;
+}
+
+
+/* =========================
+   LAKE TAHOE WORKS
+========================= */
+.lake {
+  background: #2b318a;
+  padding: 6rem 4rem;
+  position: relative;
+}
+
+.lake-title {
+  text-align: center;
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  color: #e6e27c;
+  margin-bottom: 3rem;
+}
+
+/* LAKE IMAGE GRID */
+.lake-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.lake-grid img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+}
+
+/* LAKE CAPTION */
+.lake-caption {
+  text-align: center;
+  color: #e6e27c;
+  font-style: italic;
+  margin-top: 1.5rem;
+}
+/* =========================
+   ABOUT SECTION
+========================= */
+.about {
+  background: linear-gradient(135deg, #83B2F3, #cfe1f2);
+  padding: 6rem 4rem;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+/* ABOUT IMAGE */
+.about img {
+  width: 100%;
+  max-width: 520px;
+  border-radius: 50%;
+}
+
+/* ABOUT TEXT */
+.about-title {
+  font-size: clamp(3rem, 6vw, 5rem);
+  color: #3C47DF;
+  mix-blend-mode: color-dodge;
+  margin-bottom: 1rem;
+}
+
+.about p #1926DF
+  font-size: 1.1rem;
+  max-width: 520px;
+}
+
+/* =========================
+   PROCESS SECTION
+========================= */
+.process {
+  background: #dfe8cf;
+  padding: 6rem 4rem;
+}
+
+.process-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3rem;
+  align-items: start;
+}
+
+.process h3 {
+  text-align: center;
+  margin-bottom: 1rem;
+  font-size: 1.8rem;
+  color: #2b318a;
+}
+
+/* FORCE SAME SIZE MEDIA */
+.process-media {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  display: block;
+}
+
+/* PROCESS CAPTION */
+.process-caption {
+  text-align: left;
+  margin-top: 2rem;
+  font-size: 2rem;
+  color: #355e2b;
+}
+/* =========================
+   IN THE WORKS SECTION
+========================= */
+
+.works {
+  background: #c8b79d;
+  padding: 8rem 6rem; /* MORE SPACE */
+}
+
+.works-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr; /* IMAGE DOMINATES */
+  gap: 5rem;
+  
+  margin: auto; /* CENTER EVERYTHING */
+  align-items: center;
+}
+
+/* IMAGE + OVERLAY TEXT */
+.works-image {
+  position: relative;
+}
+
+.works-image img {
+  width: 100%;
+  max-height: 600px; /* BIGGER IMAGE */
+  object-fit: cover;
+  border-radius: 24px;
+  display: block;
+}
+
+/* LARGE MULTIPLY TITLE */
+.works-title {
+  top: 2.5rem;
+  left: 2.5rem;
+  font-size: clamp(5rem, 8vw, 7rem); /* BIGGER TEXT */
+  color: #F9962EE8;
+  mix-blend-mode: hard-light;
+  line-height: 1;
+  pointer-events: none;
+}
+
+/* TEXT BLOCK */
+.works-text p {
+  font-size: 1.15rem; /* BIGGER BODY TEXT */
+  line-height: 1.6;
+  color: #6a4b2d;
+  margin-bottom: 1.5rem;
+}
+
+/* ITALIC CAPTION */
+.works-caption {
+  font-style: italic;
+}
+
+/* THUMBNAILS */
+.works-thumbs {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.works-thumbs img {
+  width: 160px;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 20px;
+}
+.works-title {
+  position: absolute;
+  left: 1.5rem;
+  font-size: clamp(4rem, 7vw, 6rem);
+  color: #b36a1e;
+  mix-blend-mode: multiply;
+  pointer-events: none;
+}
+
+/* TEXT BLOCK */
+.works-text p {
+  font-size: 1.05rem;
+  color: #6a4b2d;
+ 
+}
+
+/* ITALIC CAPTION */
+.works-caption {
+  font-style: italic;
+  opacity: 0.85;
+}
+
+/* =========================
+   RESPONSIVE (MOBILE)
+========================= */
+@media (max-width: 900px) {
+  .lake-grid,
+  .process-grid,
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-curve {
+    height: 120px;
+    margin-top: -90px;
+  }
+}
